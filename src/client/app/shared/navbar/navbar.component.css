@@ -1,13 +1,21 @@
-:host {
+/*:host {
   border-color: #e1e1e1;
   border-style: solid;
   border-width: 0 0 1px;
   display: block;
   height: 48px;
   padding: 0 16px;
+}*/
+.logo-size {
+    width: 90px;
+    /*position: absolute;*/
 }
-
-nav a {
+.myc_nav-btn{
+  color: #FFFFFF;
+  background-color: #0863ac;
+  margin:10px 5px 5px 0 !important;
+}
+/*nav a {
   color: #8f8f8f;
   font-size: 14px;
   font-weight: 500;
@@ -16,8 +24,8 @@ nav a {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-}
+}*/
 
-nav a.router-link-active {
+/*nav a.router-link-active {
   color: #106cc8;
-}
+}*/
