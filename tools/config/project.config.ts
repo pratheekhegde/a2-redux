@@ -1,7 +1,7 @@
 import { join } from 'path';
 
 import { SeedConfig } from './seed.config';
-// import { ExtendPackages } from './seed.config.interfaces';
+import { ExtendPackages } from './seed.config.interfaces';
 
 /**
  * This class extends the basic seed configuration, allowing for project specific overrides. A few examples can be found
@@ -32,6 +32,9 @@ export class ProjectConfig extends SeedConfig {
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
     ];
 
+     // Enable SCSS support
+    this.ENABLE_SCSS = true;
+
     // Add packages (e.g. lodash)
     // let additionalPackages: ExtendPackages[] = [{
     //   name: 'lodash',
@@ -59,6 +62,20 @@ export class ProjectConfig extends SeedConfig {
 
     /* Add to or override NPM module configurations: */
     // this.mergeObject(this.PLUGIN_CONFIGS['browser-sync'], { ghostMode: false });
+
+    let additionalPackages: ExtendPackages[] = [];
+
+    // momentjs
+    additionalPackages.push({
+      name:'moment',
+      path:'node_modules/moment/moment.js',
+      packageMeta:{
+        main: 'index.js',
+        defaultExtension: 'js',
+      }
+    });
+
+    this.addPackagesBundles(additionalPackages);
   }
 
 }
