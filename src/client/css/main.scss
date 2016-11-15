@@ -2,3 +2,18 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 @import "bootswatch-scss/cerulean/bootswatch";
+
+// https://github.com/franzheidl/spinners
+@import "../scss/spinners";
+
+.loading-spinner {
+ @include spinner(3em, border-width 5px, background rgba(0, 0, 0, .2));
+  position: fixed;
+  z-index: 999;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
